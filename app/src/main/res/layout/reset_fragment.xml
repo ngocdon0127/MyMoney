@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="30px"
+    android:paddingRight="30px"
+    >
+
+    <TableRow
+        >
+
+        <TextView
+            android:id="@+id/tvResetWallet"
+            android:text="@string/tvResetWallet"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            />
+
+        <EditText
+            android:id="@+id/txtResetWallet"
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:inputType="numberDecimal"
+            />
+
+    </TableRow>
+
+    <TableRow
+        >
+
+        <TextView
+            android:id="@+id/tvResetAtm"
+            android:text="@string/tvResetAtm"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            />
+
+        <EditText
+            android:id="@+id/txtResetAtm"
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:inputType="numberDecimal"
+            />
+
+    </TableRow>
+
+    <TableRow
+        >
+
+        <TextView
+            android:id="@+id/tvResetVisa"
+            android:text="@string/tvResetVisa"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            />
+
+        <EditText
+            android:id="@+id/txtResetVisa"
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:inputType="numberDecimal"
+            />
+
+    </TableRow>
+
+    <TableRow
+        >
+
+        <TextView
+            android:id="@+id/tvResetDebt"
+            android:text="@string/tvResetDebt"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            />
+
+        <EditText
+            android:id="@+id/txtResetDebt"
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:inputType="numberDecimal"
+            />
+
+    </TableRow>
+
+</TableLayout>

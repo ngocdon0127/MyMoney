@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/tvRowDate"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="wrap_content"
+            android:paddingTop="20px"
+            android:paddingBottom="20px"
+            android:text="Don"
+            />
+
+        <TextView
+            android:id="@+id/tvRowDetails"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20px"
+            />
+
+        <TextView
+            android:id="@+id/tvRowMoney"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            />
+    </TableRow>
+
+</TableLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tbTransaction"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableRow>
+        <TextView
+            android:text="                          "
+            />
+        <RadioGroup
+            android:id="@+id/rgMobilePaid"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+            <RadioButton
+                android:id="@+id/rbMobilePaidViaThangUncle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rbMobileThangUncle"
+                />
+
+            <RadioButton
+                android:id="@+id/rbMobilePaidViaAtm"
+                android:layout_marginLeft="20px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rbMobileAtm"
+                />
+
+        </RadioGroup>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/tvTarget"
+            android:text="@string/tvTarget"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            />
+
+        <Spinner
+            android:id="@+id/sTarget"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            >
+        </Spinner>
+    </TableRow>
+
+</TableLayout>

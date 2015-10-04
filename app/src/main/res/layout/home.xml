@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:id="@+id/tbBalance"
+            android:layout_width="800px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100px"
+            android:layout_marginTop="50px"
+            >
+
+            <TableRow>
+                <TextView
+                    android:layout_span="2"
+                    android:text="@string/tvLabelBalance"
+                    android:layout_gravity="center"
+                    />
+            </TableRow>
+
+            <TableRow
+                >
+
+                <TextView
+                    android:layout_width="300px"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvWallet"
+                    />
+                <TextView
+                    android:id="@+id/tvWallet"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:text="@string/tvUpdating"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                >
+
+                <TextView
+                    android:layout_width="300px"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvAtm"
+                    />
+                <TextView
+                    android:id="@+id/tvAtm"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:text="@string/tvUpdating"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                >
+
+                <TextView
+                    android:layout_width="300px"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvVisa"
+                    />
+                <TextView
+                    android:id="@+id/tvVisa"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:text="@string/tvUpdating"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                >
+
+                <TextView
+                    android:layout_width="300px"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvDebt"
+                    />
+                <TextView
+                    android:id="@+id/tvDebt"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvUpdating"
+                    />
+
+            </TableRow>
+
+            <TableRow
+                >
+
+                <TextView
+                    android:layout_width="200px"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvAvailable"
+
+                    />
+                <TextView
+                    android:id="@+id/tvAvailable"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:text="@string/tvUpdating"
+                    />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tbTransaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:layout_marginLeft="50px"
+            android:layout_below="@+id/tbBalance"
+            android:stretchColumns="1"
+            >
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tvAddTransaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvAddTransaction"
+                    />
+                <Spinner
+                    android:id="@+id/sTypeTransaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawSelectorOnTop="true"
+                    >
+
+                </Spinner>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tvMoney"
+                    android:layout_width="100px"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tvMoney"
+                    />
+                <EditText
+                    android:id="@+id/txtMoney"
+                    android:layout_width="400px"
+                    android:inputType="numberDecimal"
+                    />
+            </TableRow>
+
+        </TableLayout>
+
+
+
+        <FrameLayout
+            android:id="@+id/flTransaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tbTransaction"
+            >
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnAdd"
+            android:onClick="addTransaction"
+            android:layout_below="@+id/flTransaction"
+            />
+        <Button
+            android:id="@+id/btnDiscard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnDiscard"
+            android:onClick="discardLastTransaction"
+            android:layout_toRightOf="@+id/btnAdd"
+            android:layout_below="@+id/flTransaction"
+            android:layout_alignParentRight="true"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnRefresh"
+            android:layout_below="@+id/btnAdd"
+            android:onClick="refresh"
+            />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lvTransactions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        >
+
+    </ListView>
+
+</LinearLayout>

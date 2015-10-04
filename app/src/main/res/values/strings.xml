@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">MyMoney</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="tvWallet">Wallet</string>
+    <string name="tvAtm">ATM</string>
+    <string name="tvVisa">Visa</string>
+    <string name="tvDebt">Debt</string>
+    <string name="tvLabelBalance">All Balance</string>
+    <string name="btnAdd">Add Transaction</string>
+    <string name="tvMoney">Money</string>
+    <string name="rbMobileThangUncle">Thang Uncle</string>
+    <string name="rbMobileAtm">via ATM</string>
+    <string name="tvAddTransaction">New Transaction</string>
+    <string name="rbWithdrawAtm">ATM</string>
+    <string name="rbWithdrawVisa">Visa</string>
+    <string name="rbWithdrawLocalPos">Local POS</string>
+    <string name="rbWithdrawBroadPos">Broad POS</string>
+    <string name="rbAtm">ATM</string>
+    <string name="rbVisa">Visa</string>
+    <string name="btnDiscard">Discard last transaction</string>
+    <string name="tvTarget">People</string>
+    <string name="tvDetails">Details</string>
+    <string name="btnReset">Reset All</string>
+    <string name="tvResetWallet">Wallet</string>
+    <string name="tvResetAtm">ATM</string>
+    <string name="tvResetVisa">Visa</string>
+    <string name="tvResetDebt">Debt</string>
+    <string name="tvAvailable">Available</string>
+    <string name="tvUpdating">Updating</string>
+    <string name="btnRefresh">Refresh</string>
+    <string name="txtMasterPassword">Nhập mật khẩu</string>
+    <string name="btnLogIn">Log In</string>
+    <string name="tvConnection">Đ\' có kết nối. Bật mạng r tính tiếp nhé</string>
+</resources>
