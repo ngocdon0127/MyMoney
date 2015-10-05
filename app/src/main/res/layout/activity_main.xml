@@ -12,18 +12,9 @@
         android:layout_marginLeft="30px"
         android:layout_marginTop="300px"
         android:hint="@string/txtMasterPassword"
+        android:imeOptions="actionGo"
         />
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="logIn"
-        android:layout_marginTop="30px"
-        android:layout_marginLeft="250px"
-        android:text="@string/btnLogIn"
-        android:layout_below="@+id/txtPassword"
-        />
     <TextView
         android:id="@+id/tvConnection"
         android:layout_width="wrap_content"
