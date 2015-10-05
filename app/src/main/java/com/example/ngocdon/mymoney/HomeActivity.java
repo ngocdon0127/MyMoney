@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.app.ProgressDialog;
 import android.app.TabActivity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -16,6 +17,7 @@ import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,6 +61,9 @@ public class HomeActivity extends TabActivity {
     FrameLayout flTransaction;
     Fragment fragment;
     ListView lvTransactions;
+    ProgressDialog progressDialog;
+    Handler handler = new Handler();
+
     private int transactionType = 0;
     private int target = 0;
     private String details;
@@ -70,6 +75,7 @@ public class HomeActivity extends TabActivity {
 	private int position = 0;
 	private long money = 0;
     private int tType = 0;
+    private int progress = 0;
 
     public static int flagOrientation;
 
@@ -619,6 +625,34 @@ public class HomeActivity extends TabActivity {
     }
 
     private void list(){
+        progress = 0;
+        progressDialog = new ProgressDialog(HomeActivity.this);
+        progressDialog.setCancelable(false);
+        progressDialog.setMax(1);
+        progressDialog.setMessage("Reading data from server...");
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.show();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true) {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            progressDialog.setProgress(progress);
+                        }
+                    });
+                    if (progress == 1)
+                        break;
+                }
+                progressDialog.dismiss();
+            }
+        }).start();
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -671,8 +705,9 @@ public class HomeActivity extends TabActivity {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (intent.getAction().equals(Information.KEY_BROADCAST_DONE_LIST)){
+                progress = 1;
                 updateBalance();
-                Toast.makeText(getApplicationContext(), "Updated", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), "Updated", Toast.LENGTH_SHORT).show();
                 return;
             }
             if (intent.getAction().equals(Information.KEY_BROADCAST_DISCARD_TRANSACTION)){
